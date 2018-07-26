@@ -1,0 +1,13 @@
+hangman game
+Pick a theme --(Theme Video Games) -- list of random video games(at least 10)
+
+**game needs to be able to**
+pick one of the random words/phrases
+(should display word as _ _ _ _ _ _  _ _ _ _ _, update for correct letters)
+start when user presses a key(events/listeners)
+track player guesses both correct and incorrect
+(have incorrect letters displayed)
+list number of guesses remaining(tries remaining)
+keep track of wins/losses(score)
+start game over again 
+
