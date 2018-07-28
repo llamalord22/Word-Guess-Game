@@ -1,0 +1,38 @@
+
+
+body{
+    background-color: white;
+    padding: 10px;
+    font-family: 'Permanent Marker', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #00b300;
+    background: url("../images/pacback.jpg");
+    background-size: 100%;
+}
+
+.container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.gm {
+    padding: 10px;
+    text-align: center;
+    border: 5px solid #00b300;
+
+}
+
+#league,
+#streetfighter {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+#league,
+#tryAgain,
+#continue {
+    display: none;
+}
+
+#activeWord {
+    letter-spacing: 5px
+}
