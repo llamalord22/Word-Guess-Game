@@ -34,12 +34,12 @@
         playerWord.push("_");
     }
 
-    document.getElementById("tryAgain").style.cssText= "display: none";
-    document.getElementById("continue").style.cssText= "display: none";
-    document.getElementById("league").style.cssText= "display:none";
-    document.getElementById("streetfighter").style.cssText= "display: none";
-    document.getElementById("anykey").style.cssText= "display: none";
-
+    document.getElementById("tryAgain").style.cssText = "display: none";
+    document.getElementById("continue").style.cssText = "display: none";
+    document.getElementById("league").style.cssText = "display:none";
+    document.getElementById("streetfighter").style.cssText = "display: none";
+    document.getElementById("anykey").style.cssText = "display: none";
+    
     updateGame();
 
     };
@@ -103,7 +103,10 @@
         } else {
             if(event.keyCode >= 65 && event.keyCode <= 90) {
                 pickLetter(event.key.toLowerCase());
+                updateGame();
+
             }
         }
     };
+
 
