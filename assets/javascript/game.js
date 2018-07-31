@@ -13,12 +13,12 @@
     "pokemon",
     ];
 
-    var score = -1;
+    var score = 0;
     var wordIndex = 0; //for the active word
     var playerWord = []; //players correct guesses
     var lettersUsed = []; //incorrect guesses
-    var triesLeft = 0;  //attempts left
-    var finishGame = false;
+    var triesLeft = 8;  //attempts left
+    var finishGame = true;
     const maxAttempts = 8;
 
     function restart() {
@@ -27,24 +27,26 @@
         wordIndex = Math.floor(Math.random() * (words.length));
         console.log(words[wordIndex])
 
-    lettersUsed = [];
-    playerWord = [];
+        lettersUsed = [];
+        playerWord = [];
 
-    for (var i = 0; i < words[wordIndex].length; i++) {
-        playerWord.push("_");
-    }
+        for (var i = 0; i < words[wordIndex].length; i++) {
+            
+            playerWord.push("_");
+        }
 
-    document.getElementById("tryAgain").style.cssText = "display: none";
-    document.getElementById("continue").style.cssText = "display: none";
-    document.getElementById("league").style.cssText = "display:none";
-    document.getElementById("streetfighter").style.cssText = "display: none";
-    document.getElementById("anykey").style.cssText = "display: none";
-    
-    updateGame();
+        document.getElementById("tryAgain").style.cssText = "display: none";
+        document.getElementById("continue").style.cssText = "display: none";
+        document.getElementById("league").style.cssText = "display:none";
+        document.getElementById("streetfighter").style.cssText = "display: none";
+        document.getElementById("anykey").style.cssText = "display: none";
+        
+        updateGame();
 
     };
 
     function updateGame() {
+        console.log('player word=>', playerWord)
         document.getElementById("newScore").innerText = score;
         document.getElementById("activeWord").innerText = "";
         for (var i = 0; i < playerWord.length; i++) {
@@ -64,8 +66,8 @@
             lettersUsed.push(letter);
             evaluateGuess(letter);
         }
-        updateGame()
-        victory()
+        updateGame();
+        victory();
     };
 
     function evaluateGuess(letter) {
